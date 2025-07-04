@@ -1,4 +1,15 @@
-# MyPortfolio
+# My Portfolio
+
+A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities through clean design and efficient architecture.
+
+
+## Key Features
+
+- **Modular Architecture**: Feature-based organization with lazy loading
+- **Optimized Performance**: OnPush change detection, lightweight animations
+- **Global Ready**: Multi-language support (i18n) with dynamic content loading
+- **Adaptive UI**: Responsive layouts using CSS Grid/Flex with mobile-first approach
+- **Developer Experience**: Strict typing, reusable components, and comprehensive docs
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
