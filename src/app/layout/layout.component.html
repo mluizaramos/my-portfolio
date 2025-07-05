@@ -1,11 +1,37 @@
 <div class="layout-container">
-  <aside class="sidebar">
+
+  <!-- DESKTOP SIDEBAR -->
+  <aside
+    class="sidebar"
+    *ngIf="!isMobile"
+  >
     <app-sidebar></app-sidebar>
   </aside>
 
-  <div class="spacer"></div> <!-- espaço de 20px -->
+  <!-- MOBILE SIDEBAR (só aparece com toggle) -->
+  <aside
+    class="sidebar mobile"
+    *ngIf="isMobileSidebarOpen && isMobile"
+    [class.mobile-active]="isMobileSidebarOpen"
+  >
+    <app-sidebar></app-sidebar>
+  </aside>
 
-  <div class="main-content">
+  <!-- CONTENT -->
+  <div
+    class="main-content"
+    [class.full-width]="isMobile"
+  >
+    <!-- Botão menu só no mobile -->
+    <button
+      class="hamburger-btn"
+      *ngIf="isMobile"
+      (click)="toggleSidebar()"
+      aria-label="Abrir menu"
+    >
+      ☰
+    </button>
+
     <app-content></app-content>
   </div>
 </div>

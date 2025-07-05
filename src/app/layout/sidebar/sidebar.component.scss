@@ -1,51 +1,27 @@
-// .sidebar {
-//   width: 264px;
-//   background-color: #141414;
-//   color: #fff;
-//   padding: 1rem;
-//   height: 90vh;
-//   position: fixed;
-//   transition: transform 0.3s ease-in-out;
-//   z-index: 1000;
-//   border-radius: 30px;
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 
-//   img {
-//     width: 100%;
-//     border-radius: 50%;
-//     margin-bottom: 1rem;
-//   }
+.sidebar {
+  width: 100%;
+  height: 100%;
+  color: white;
 
-//   .top-controls {
-//     display: flex;
-//     justify-content: space-between;
-//     margin-bottom: 1rem;
-//   }
+  img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
 
-//   .download-btn {
-//     margin-top: 2rem;
-//   }
+  .top-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
 
-//   .close-btn {
-//     display: none;
-//     position: absolute;
-//     top: 1rem;
-//     right: 1rem;
-//     background: none;
-//     color: white;
-//     border: none;
-//     font-size: 1.5rem;
-//   }
-
-//   @media (max-width: 768px) {
-//     transform: translateX(-100%);
-//     position: fixed;
-
-//     &.mobile-active {
-//       transform: translateX(0);
-//     }
-
-//     .close-btn {
-//       display: block;
-//     }
-//   }
-// }
+  .download-btn {
+    margin-top: 2rem;
+  }
+}
