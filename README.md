@@ -1,4 +1,15 @@
-# MyPortfolio
+# My Portfolio
+
+A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities through clean design and efficient architecture.
+
+
+## Key Features
+
+- **Modular Architecture**: Feature-based organization with lazy loading
+- **Optimized Performance**: OnPush change detection, lightweight animations
+- **Global Ready**: Multi-language support (i18n) with dynamic content loading
+- **Adaptive UI**: Responsive layouts using CSS Grid/Flex with mobile-first approach
+- **Developer Experience**: Strict typing, reusable components, and comprehensive docs
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
@@ -35,24 +46,6 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 
