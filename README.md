@@ -1,9 +1,14 @@
-# My Portfolio
+<div align="center">
+   <h1>My Portfolio</h1>
+  <p>A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities through clean design and efficient architecture.</p>
+</div>
 
-A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities through clean design and efficient architecture.
+<br/>
+
+![Portfolio Preview](src/assets/images/preview-dark.png)
 
 
-## Key Features
+### Key Features
 
 - **Modular Architecture**: Feature-based organization with lazy loading
 - **Optimized Performance**: OnPush change detection, lightweight animations
@@ -11,42 +16,24 @@ A high-performance portfolio built with modern Angular practices, showcasing pro
 - **Adaptive UI**: Responsive layouts using CSS Grid/Flex with mobile-first approach
 - **Developer Experience**: Strict typing, reusable components, and comprehensive docs
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+<br/>
 
-## Development server
+### Languages & tools
+ <p>A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities.</p>
+<img src="https://skillicons.dev/icons?i=figma,html,notion,css,vscode,javascript,github,bootstrap,nextjs,git,tailwind" />
 
-To start a local development server, run:
+<br/>
 
-```bash
-ng serve
-```
+### Development server
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- To start a local development server, run `ng serve`. <br>
+- Once the server is running, open your browser and navigate to `http://localhost:4200/`. <br>
+- The application will automatically reload whenever you modify any of the source files. To build the project run `ng build`.<br>
 
-## Code scaffolding
+<br/>
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+##
+<br/>
+<div align="center">
+  This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+</div>
