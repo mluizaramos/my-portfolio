@@ -1,13 +1,15 @@
-<!-- <aside class="sidebar" [class.mobile-active]="isMenuOpen"> -->
+<!-- usamos <aside> quando o conteúdo é secundário, como uma sidebar, um menu, etc. -->
 <aside class="sidebar">
   <div class="top-controls">
+    <!-- temas e idiomas (futuramente) -->
     <!-- <app-theme-toggle></app-theme-toggle>
     <app-language-switcher></app-language-switcher> -->
   </div>
 
   <div class="profile">
-    <img src="assets/images/preview-dark.png" alt="Minha Foto" />
-    <h2>Seu Nome</h2>
+    <img src="/src/assets/images/preview-dark.png" alt="Minha Foto" />
+    <h2 class="title-name">Maria Luiza Ramos</h2>
+    <p>{{ 'software-engineering-student' | translate }}</p>
     <p>Resumo sobre você</p>
   </div>
 

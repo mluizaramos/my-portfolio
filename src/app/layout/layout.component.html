@@ -1,6 +1,6 @@
 <div class="layout-container">
 
-  <!-- DESKTOP SIDEBAR -->
+  <!-- exibe apenas se nao estiver no modo mobile   -->
   <aside
     class="sidebar"
     *ngIf="!isMobile"
@@ -8,7 +8,7 @@
     <app-sidebar></app-sidebar>
   </aside>
 
-  <!-- MOBILE SIDEBAR (só aparece com toggle) -->
+  <!-- só aparece se o menu está aberto (isMobileSidebarOpen === true) e a tela for mobile -->
   <aside
     class="sidebar mobile"
     *ngIf="isMobileSidebarOpen && isMobile"
@@ -17,12 +17,12 @@
     <app-sidebar></app-sidebar>
   </aside>
 
-  <!-- CONTENT -->
+  <!-- o full-width é ativada no mobile, para ocupar 100% da largura -->
   <div
     class="main-content"
     [class.full-width]="isMobile"
   >
-    <!-- Botão menu só no mobile -->
+    <!-- só aparece no modo mobile -->
     <button
       class="hamburger-btn"
       *ngIf="isMobile"
@@ -32,6 +32,7 @@
       ☰
     </button>
 
+    <!-- renderiza o conteúdo principal (ContentComponent) -->
     <app-content></app-content>
   </div>
 </div>
