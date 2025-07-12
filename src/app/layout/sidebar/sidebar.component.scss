@@ -1,4 +1,6 @@
-// define o estilo base do componente, já que ele é standalone
+//importar 
+@use '../../../styles/variables' as *;
+
 :host {
   display: block;
   height: 100%;
@@ -12,7 +14,6 @@
 
   img {
     width: 100%;
-    border-radius: 50%;
     margin-bottom: 1rem;
   }
 
@@ -21,12 +22,140 @@
     justify-content: space-between;
     margin-bottom: 1rem;
   }
-
-  .download-btn {
-    margin-top: 2rem;
-  }
 }
 
 .title-name{
-    font-size: 16px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.text-gradient {
+  margin: 0;
+  font-weight: 500;
+  font-size: 10px;
+  background: $linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+  margin: 5px;
+  color: $white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  .dark-theme & {
+    color: $white;
+  }
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+.translations {
+  background-color: transparent;
+  border: transparent;
+  margin: 5px;
+  padding: 0;
+  font-weight: 100;
+  font-size: 10px;
+  cursor: pointer;
+  color: $white;
+  transition: all 0.3s ease;
+
+  .dark-theme & {
+    color: $white;
+  }
+
+  &:hover {
+    background: $linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.my-photo{
+  height: 180px;
+}
+
+.about-me{
+  margin-top: 20px;
+  font-size: 10px;
+  font-weight: 300;
+  color: $white;
+
+  .dark-theme & {
+    color: $white;
+  }
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .btn-cv-1 {
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 200;
+    cursor: pointer;
+    border: transparent;
+
+    &:hover {
+      background: $linear;
+      color: $white;
+      border-color: transparent;
+    }
+
+    .dark-theme & {
+      color: $white;
+      border-color: $white;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .icon-svg {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+
+    .dark-theme & {
+      filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  a{
+    padding: 0;
+    margin: 0;
+    padding-top: 14px;
+  }
+}
+
+.email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-email{
+  color: $white;
+  font-size: 10px;
+  font-weight: 200;
 }

@@ -15,7 +15,8 @@ $spacer: 20px;
     height: 94vh;
     background-color: #141414;
     border-radius: 30px;
-    padding: 1rem;
+    padding: 2rem;
+    padding-top: 3rem;
     box-sizing: border-box;
     z-index: 1000; // garante que fique acima de tudo
     transition: left 0.3s ease-in-out; // prepara para animações de entrada no mobile
@@ -27,7 +28,7 @@ $spacer: 20px;
       left: -100%; //esconde a sidebar fora da tela
       height: 94vh;
       border-radius: 0 20px 20px 0;
-      background-color: aqua;
+      background-color: rgb(59, 59, 59);
 
       &.mobile-active {
         left: 0; // quando mobile-active está presente, a sidebar desliza para dentro da tela
