@@ -1,5 +1,9 @@
 <div align="center">
    <h1>My Portfolio</h1>
+
+  <h2>🚧 Building</h2>
+   <br/>
+   <br/>
   <p>A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities through clean design and efficient architecture.</p>
   <br/>
   <img src="src/assets/images/preview-light.png" alt="Portfolio Preview" style="max-width: 100%; height: auto;">
