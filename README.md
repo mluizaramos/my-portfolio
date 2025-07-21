@@ -1,7 +1,8 @@
 <div align="center">
    <h1>My Portfolio</h1>
+   <br/>
 
-  <h2>🚧 Building</h2>
+   <h3>🚧 Building</h3>
    <br/>
    <br/>
   <p>A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities through clean design and efficient architecture.</p>
