@@ -2,7 +2,7 @@
    <h1>My Portfolio</h1>
    <br/>
 
-   <h3>🚧 Building his Project</h3>
+   <h3>🚧 Building this project</h3>
    <br/>
    <br/>
   <p>A high-performance portfolio built with modern Angular practices, showcasing professional work and technical capabilities through clean design and efficient architecture.</p>
