@@ -13,7 +13,7 @@ $spacer: 20px;
     left: 20px;
     width: $sidebar-width;
     height: 94vh;
-    background-color: #141414;
+    background-color: #000000;
     border-radius: 30px;
     padding: 2rem;
     padding-top: 3rem;
@@ -54,9 +54,9 @@ $spacer: 20px;
     margin-left: calc(#{$sidebar-width} + #{$spacer}); // afasta o content da sidebar (no desktop)
     height: 100vh;
     overflow-y: auto; // habilita scroll somente no conteúdo
-    background-color: #141414;
+    background-color: #000000;
     color: #fff;
-    padding: 2rem;
+    padding: 6rem;
     border-radius: 30px;
     box-sizing: border-box;
 

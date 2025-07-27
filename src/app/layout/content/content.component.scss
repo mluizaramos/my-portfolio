@@ -1,6 +1,14 @@
+.content {
+  //display: flex;
+  //flex-direction: column; // elementos um embaixo do outro
+  //align-items: center; 
+  //width: 100%;
+}
+
 app-theme-language-controls {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
   padding: 1rem;
+  align-items: center;
 }
