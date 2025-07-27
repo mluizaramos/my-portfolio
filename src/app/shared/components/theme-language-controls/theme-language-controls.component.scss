@@ -1,0 +1,53 @@
+@use '../../../../styles/variables' as *;
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+
+  @media (min-width: 769px) {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+  margin: 5px;
+  color: $white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  .dark-theme & {
+    color: $white;
+  }
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+.translations {
+  background-color: transparent;
+  border: none;
+  margin: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  color: $white;
+  transition: all 0.3s ease;
+
+  .dark-theme & {
+    color: $white;
+  }
+
+  &:hover {
+    background: $linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}

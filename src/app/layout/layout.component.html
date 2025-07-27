@@ -7,11 +7,11 @@
   >
     <app-sidebar></app-sidebar>
   </aside>
-
+  
   <!-- só aparece se o menu está aberto (isMobileSidebarOpen === true) e a tela for mobile -->
   <aside
     class="sidebar mobile"
-    *ngIf="isMobileSidebarOpen && isMobile"
+    *ngIf="isMobile"
     [class.mobile-active]="isMobileSidebarOpen"
   >
     <app-sidebar></app-sidebar>
@@ -29,7 +29,10 @@
       (click)="toggleSidebar()"
       aria-label="Abrir menu"
     >
-      ☰
+      <i 
+        class="fa"
+        [ngClass]="isMobileSidebarOpen ? 'fa-xmark' : 'fa-bars'"
+      ></i>
     </button>
 
     <!-- renderiza o conteúdo principal (ContentComponent) -->

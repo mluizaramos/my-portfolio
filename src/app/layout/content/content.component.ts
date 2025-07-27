@@ -4,13 +4,24 @@ import { CertificatesComponent } from "../../pages/home/certificates/certificate
 import { ExperienceComponent } from "../../pages/home/experience/experience.component";
 import { ProjectsComponent } from "../../pages/home/projects/projects.component";
 import { SkillsComponent } from "../../pages/home/skills/skills.component";
+import { ThemeLanguageControlsComponent } from "../../shared/components/theme-language-controls/theme-language-controls.component";
+import { ScreenService } from '../../shared/components/screen/screen.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-content',
-  imports: [BannerComponent, CertificatesComponent, ExperienceComponent, ProjectsComponent, SkillsComponent],
+  imports: [NgIf, BannerComponent, CertificatesComponent, ExperienceComponent, ProjectsComponent, SkillsComponent, ThemeLanguageControlsComponent],
   templateUrl: './content.component.html',
-  styleUrl: './content.component.scss'
+  styleUrls: ['./content.component.scss']
 })
 export class ContentComponent {
+  isMobile = false;
 
+  constructor(private screenService: ScreenService) {}
+
+  ngOnInit(): void {
+    this.screenService.isMobile$.subscribe((value) => {
+      this.isMobile = value;
+    });
+  }
 }

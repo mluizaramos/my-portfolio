@@ -23,15 +23,29 @@ $spacer: 20px;
 
     // menu aberto
     &.mobile {
-      width: 60%;
-      top: 16px;
-      left: -100%; //esconde a sidebar fora da tela
-      height: 94vh;
-      border-radius: 0 20px 20px 0;
-      background-color: rgb(59, 59, 59);
+      position: fixed;
+      top: 1rem;
+      left: 0;
+      height: 95%;
+      width: 93%;
+      margin-left: 1rem;
+      padding-top: 4rem;
+      border-radius: 2rem;
+      background-color: rgba(20, 20, 20, 0.4);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+
+      transform: translateX(-110%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
 
       &.mobile-active {
-        left: 0; // quando mobile-active está presente, a sidebar desliza para dentro da tela
+        left: 0;
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
       }
     }
   }
@@ -49,6 +63,7 @@ $spacer: 20px;
     &.full-width {
       margin-left: 0;
       width: 100%; // no mobile, o conteúdo ocupa 100% da largura
+      height: 95%;
       border-radius: 30px;
     }
   }
