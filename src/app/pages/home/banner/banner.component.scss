@@ -1,13 +1,67 @@
 @use '../../../../styles/variables' as *;
 
-.banner{
-    height: 280px;
+.title-banner {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
 
+.title-banner-linear {
+    margin: 0;
+    font-weight: 800;
+    font-size: 2.5rem;
+    background: $linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-banner {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 1rem;
-    padding: 1rem;
-    background-color: rgba(20, 20, 20, 0.4);
+    padding: 4rem;
+    background-color: #151515ff;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    border: 1px solid #111111;
+    border: 1px solid #1b1b1bff;
+}
+
+.banner-img {
+    
+}
+
+.btn-cv-2 {
+    padding: 8px 18px;
+    border-radius: 0.2rem;
+    background: $linear;
+    color: $white;
+    border-color: transparent;
+    cursor: pointer;
+    border: transparent;
+
+    &:hover {
+        background: $white;
+        color: $pink;
+    }
+}
+
+.btn-cv-1 {
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 200;
+    cursor: pointer;
+    border: transparent;
+
+    .dark-theme & {
+      color: $white;
+      border-color: $white;
+    }
 }

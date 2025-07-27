@@ -3,9 +3,9 @@
 .top-controls {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
   padding: 1rem;
   gap: 1rem;
+  padding-bottom: 3rem;
 
   @media (min-width: 769px) {
     padding: 0;
@@ -33,7 +33,6 @@
 .translations {
   background-color: transparent;
   border: none;
-  margin: 5px;
   font-size: 10px;
   cursor: pointer;
   color: $white;
