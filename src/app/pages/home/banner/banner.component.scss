@@ -50,18 +50,18 @@
         background: $white;
         color: $pink;
     }
-}
-
-.btn-cv-1 {
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: 200;
-    cursor: pointer;
-    border: transparent;
 
     .dark-theme & {
       color: $white;
       border-color: $white;
     }
+}
+
+.techs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    color: rgb(225, 225, 225);
 }
