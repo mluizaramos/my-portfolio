@@ -3,9 +3,10 @@ $sidebar-width: 20%;
 $spacer: 20px;
 
 .layout-container {
-  height: 100vh; // altura totalo da tela
+  
   width: 100%; // largura total da tela
   overflow: hidden; // evita o scroll no container principal *?
+
 
   .sidebar {
     position: fixed; // fixa na tela
@@ -52,7 +53,7 @@ $spacer: 20px;
 
   .main-content {
     margin-left: calc(#{$sidebar-width} + #{$spacer}); // afasta o content da sidebar (no desktop)
-    height: 100vh;
+    height: 93vh;
     overflow-y: auto; // habilita scroll somente no conteúdo
     background-color: #000000;
     color: #fff;
