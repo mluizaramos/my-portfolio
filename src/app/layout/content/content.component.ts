@@ -7,10 +7,11 @@ import { SkillsComponent } from "../../pages/home/skills/skills.component";
 import { ThemeLanguageControlsComponent } from "../../shared/components/theme-language-controls/theme-language-controls.component";
 import { ScreenService } from '../../shared/components/screen/screen.component';
 import { NgIf } from '@angular/common';
+import { FooterComponent } from "../../pages/home/footer/footer.component";
 
 @Component({
   selector: 'app-content',
-  imports: [NgIf, BannerComponent, CertificatesComponent, ExperienceComponent, ProjectsComponent, SkillsComponent, ThemeLanguageControlsComponent],
+  imports: [NgIf, BannerComponent, CertificatesComponent, ExperienceComponent, ProjectsComponent, SkillsComponent, ThemeLanguageControlsComponent, FooterComponent],
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
