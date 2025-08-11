@@ -8,10 +8,11 @@ import { ThemeLanguageControlsComponent } from "../../shared/components/theme-la
 import { ScreenService } from '../../shared/components/screen/screen.component';
 import { NgIf } from '@angular/common';
 import { FooterComponent } from "../../pages/home/footer/footer.component";
+import { HobbiesComponent } from "../../pages/home/hobbies/hobbies.component";
 
 @Component({
   selector: 'app-content',
-  imports: [NgIf, BannerComponent, CertificatesComponent, ExperienceComponent, ProjectsComponent, SkillsComponent, ThemeLanguageControlsComponent, FooterComponent],
+  imports: [NgIf, BannerComponent, CertificatesComponent, ExperienceComponent, ProjectsComponent, SkillsComponent, ThemeLanguageControlsComponent, FooterComponent, HobbiesComponent],
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
