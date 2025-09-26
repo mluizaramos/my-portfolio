@@ -1,67 +1,67 @@
 @use '../../../../styles/variables' as *;
 
-.title-banner {
-    font-size: 2.5rem;
-    margin: 0;
-    padding: 0;
-}
+// .title-banner {
+//     font-size: 2.5rem;
+//     margin: 0;
+//     padding: 0;
+// }
 
-.title-banner-linear {
-    margin: 0;
-    font-weight: 800;
-    font-size: 2.5rem;
-    background: $linear;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
+// .title-banner-linear {
+//     margin: 0;
+//     font-weight: 800;
+//     font-size: 2.5rem;
+//     background: $linear;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     background-clip: text;
+//     color: transparent;
+// }
 
-.text-banner {
-    font-weight: 200;
-    font-size: 1.2rem;
-}
+// .text-banner {
+//     font-weight: 200;
+//     font-size: 1.2rem;
+// }
 
-.banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    padding: 4rem;
-    background-color: #151515ff;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    border: 1px solid #1b1b1bff;
-}
+// .banner{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 1rem;
+//     padding: 4rem;
+//     background-color: #2A2B2D;
+//     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+//     border: 1px solid #1b1b1bff;
+// }
 
-.banner-img {
+// .banner-img {
     
-}
+// }
 
-.btn-cv-2 {
-    padding: 8px 18px;
-    border-radius: 0.2rem;
-    background: $linear;
-    color: $white;
-    border-color: transparent;
-    cursor: pointer;
-    border: transparent;
+// .btn-cv-2 {
+//     padding: 8px 18px;
+//     border-radius: 0.2rem;
+//     background: $linear;
+//     color: $white;
+//     border-color: transparent;
+//     cursor: pointer;
+//     border: transparent;
 
-    &:hover {
-        background: $white;
-        color: $pink;
-    }
+//     &:hover {
+//         background: $white;
+//         color: $pink;
+//     }
 
-    .dark-theme & {
-      color: $white;
-      border-color: $white;
-    }
-}
+//     .dark-theme & {
+//       color: $white;
+//       border-color: $white;
+//     }
+// }
 
-.techs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 3rem;
-    color: rgb(225, 225, 225);
-}
+// .techs {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 2rem;
+//     padding: 3rem;
+//     color: rgb(225, 225, 225);
+// }

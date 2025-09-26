@@ -1,14 +1,47 @@
+@use '../../../styles/variables' as *;
+
+$content-width: 73%;
+$content-height: 85%;
+$spacer: 20px;
+
 .content {
-  //display: flex;
-  //flex-direction: column; // elementos um embaixo do outro
-  //align-items: center; 
+  display: flex;
+  flex-direction: column; // elementos um embaixo do outro
+  align-items: center;
+  width: $content-width;
+  height: $content-height;
+  background-color: $black;
+  color: $white;
+  border-radius: 30px;
+  padding: 3rem 2rem 1rem 2rem;
   //width: 100%;
+  margin-left: 18rem;
 }
 
-app-theme-language-controls {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  align-items: center;
-}
+// app-theme-language-controls {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 1rem;
+//   padding: 1rem;
+//   align-items: center;
+// }
+
+
+// .main-content {
+//   margin-left: calc(#{$sidebar-width} + #{$spacer}); // afasta o content da sidebar (no desktop)
+//   height: 93vh;
+//   overflow-y: auto; // habilita scroll somente no conteúdo
+//   background-color: #141414;
+//   color: #fff;
+//   padding: 4rem;
+//   padding: 6rem 6rem 3rem 6rem;
+//   border-radius: 30px;
+//   box-sizing: border-box;
+
+//   &.full-width {
+//     margin-left: 0;
+//     width: 100%; // no mobile, o conteúdo ocupa 100% da largura
+//     height: 95%;
+//     border-radius: 30px;
+//   }
+// }

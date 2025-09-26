@@ -3,72 +3,8 @@ $sidebar-width: 20%;
 $spacer: 20px;
 
 .layout-container {
-  
   width: 100%; // largura total da tela
   overflow: hidden; // evita o scroll no container principal *?
-
-
-  .sidebar {
-    position: fixed; // fixa na tela
-    top: 20px;
-    left: 20px;
-    width: $sidebar-width;
-    height: 94vh;
-    background-color: #000000;
-    border-radius: 30px;
-    padding: 2rem;
-    padding-top: 3rem;
-    box-sizing: border-box;
-    z-index: 1000; // garante que fique acima de tudo
-    transition: left 0.3s ease-in-out; // prepara para animações de entrada no mobile
-
-    // menu aberto
-    &.mobile {
-      position: fixed;
-      top: 1rem;
-      left: 0;
-      height: 95%;
-      width: 93%;
-      margin-left: 1rem;
-      padding-top: 4rem;
-      border-radius: 2rem;
-      background-color: rgba(20, 20, 20, 0.4);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(40px);
-      -webkit-backdrop-filter: blur(40px);
-
-      transform: translateX(-110%);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-
-      &.mobile-active {
-        left: 0;
-        opacity: 1;
-        transform: translateX(0);
-        pointer-events: auto;
-      }
-    }
-  }
-
-  .main-content {
-    margin-left: calc(#{$sidebar-width} + #{$spacer}); // afasta o content da sidebar (no desktop)
-    height: 93vh;
-    overflow-y: auto; // habilita scroll somente no conteúdo
-    background-color: #000000;
-    color: #fff;
-    padding: 4rem;
-    padding: 6rem 6rem 3rem 6rem;
-    border-radius: 30px;
-    box-sizing: border-box;
-
-    &.full-width {
-      margin-left: 0;
-      width: 100%; // no mobile, o conteúdo ocupa 100% da largura
-      height: 95%;
-      border-radius: 30px;
-    }
-  }
 }
 
 .hamburger-btn {
