@@ -1,24 +1,32 @@
-@use '../../../styles/variables' as *;
 
-$sidebar-width: 15%;
-$sidebar-height: 85%;
-$spacer: 20px;
+/* src/app/sidebar/sidebar.component.scss */
+/* src/app/sidebar/sidebar.component.scss */
+@use '../../../styles/variables' as *; // ou ajuste o caminho conforme seu projeto
+$gap: 20px;
 
-.sidebar {
-  position: fixed;
-  width: $sidebar-width;
-  height: $sidebar-height;
-  background-color: $black;
-  border-radius: 30px;
-  padding: 3rem 2rem 1rem 2rem;
-  color: $white;
+:host {
+  display: block;
+  /* forçamos altura baseada no viewport, subtraindo top+bottom padding do layout */
+  height: calc(100vh - #{2 * $gap});
+  box-sizing: border-box;
 }
 
-// :host {
-//   display: block;
-//   height: 100%;
-//   width: 100%;
-// }
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  background-color: $black;
+  color: $white;
+  border-radius: 30px;
+}
+
+.sidebar-panel {
+  padding: 30px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  overflow: hidden;        /* sem scroll na sidebar — corta o conteúdo que passar */
+}
 
 // .sidebar {
 //   box-sizing: border-box;
@@ -54,136 +62,136 @@ $spacer: 20px;
 //   }
 // }
 
-// .sidebar {
-//   width: 100%;
-//   height: 100%;
-//   color: white;
-//   margin-bottom: 1rem;
+.sidebar {
+  width: 100%;
+  height: 100%;
+  color: white;
+  margin-bottom: 1rem;
 
-//   img {
-//     width: 100%;
-//     margin-bottom: 1rem;
-//   }
-// }
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
 
-// .title-name{
-//   margin: 0;
-//   font-size: 18px;
-// }
+.title-name{
+  margin: 0;
+  font-size: 18px;
+}
 
-// .text-gradient {
-//   margin: 0;
-//   font-weight: 500;
-//   font-size: 10px;
-//   background: $linear;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   background-clip: text;
-//   color: transparent;
-//   margin-bottom: 1rem;
-// }
+.text-gradient {
+  margin: 0;
+  font-weight: 500;
+  font-size: 10px;
+  background: $linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
 
-// .my-photo{
-//   margin-top: 1rem;
-//   height: 10rem;
-// }
+.my-photo{
+  margin-top: 1rem;
+  height: 10rem;
+}
 
-// .about-me{
-//   margin-top: 20px;
-//   font-size: 10px;
-//   font-weight: 300;
-//   color: $white;
-//   margin-bottom: 1rem;
+.about-me{
+  margin-top: 20px;
+  font-size: 10px;
+  font-weight: 300;
+  color: $white;
+  margin-bottom: 1rem;
 
-//   .dark-theme & {
-//     color: $white;
-//   }
-// }
+  .dark-theme & {
+    color: $white;
+  }
+}
 
-// .download-btn {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 0.5rem;
-//   margin-bottom: 1rem;
+.download-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 
-//   .btn-cv-1 {
-//     padding: 8px 18px;
-//     border-radius: 30px;
-//     font-size: 12px;
-//     font-weight: 200;
-//     cursor: pointer;
-//     border: transparent;
+  .btn-cv-1 {
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 200;
+    cursor: pointer;
+    border: transparent;
 
-//     &:hover {
-//       background: $linear;
-//       color: $white;
-//       border-color: transparent;
-//     }
+    &:hover {
+      background: $linear;
+      color: $white;
+      border-color: transparent;
+    }
 
-//     .dark-theme & {
-//       color: $white;
-//       border-color: $white;
-//     }
-//   }
+    .dark-theme & {
+      color: $white;
+      border-color: $white;
+    }
+  }
 
-//   .social-icons {
-//     display: flex;
-//     align-items: center;
-//     gap: 0.2rem;
-//   }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
 
-//   .icon-svg {
-//     width: 30px;
-//     height: 30px;
-//     transition: all 0.3s ease;
+  .icon-svg {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
 
-//     .dark-theme & {
-//       filter: brightness(0) invert(1);
-//     }
+    .dark-theme & {
+      filter: brightness(0) invert(1);
+    }
 
-//     &:hover {
-//       transform: scale(1.1);
-//     }
-//   }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 
-//   a{
-//     padding: 0;
-//     margin: 0;
-//     padding-top: 14px;
-//   }
-// }
+  a{
+    padding: 0;
+    margin: 0;
+    padding-top: 14px;
+  }
+}
 
-// .email{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-// .text-email{
-//   color: $white;
-//   font-size: 10px;
-//   font-weight: 200;
-// }
+.text-email{
+  color: $white;
+  font-size: 10px;
+  font-weight: 200;
+}
 
-// @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-//   .info{
-//     padding-top: 2rem;
-//     padding-bottom: 1rem;
-//   }
+  .info{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
 
-//   .download-btn{
-//     padding-top: 0.5rem;
-//     padding-bottom: 1rem;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
+  .download-btn{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-//   .email{
-//     display: flex;
-//     justify-content: center;
-//     text-align: center;
-//   }
-// }
+  .email{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}

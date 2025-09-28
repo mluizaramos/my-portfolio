@@ -1,39 +1,37 @@
+<!-- src/app/sidebar/sidebar.component.html -->
 <aside class="sidebar">
-
-  <app-theme-language-controls *ngIf="!isMobile"></app-theme-language-controls>
-
-  <div class="profile">
-    <div class="my-photo">
-      <!-- <img src="../../../assets/images/preview-dark.png" alt="Minha Foto" /> -->
+  <div class="sidebar-panel">
+     <div class="profile">
+      <div class="my-photo">
+        <!-- <img src="../../../assets/images/preview-dark.png" alt="Minha Foto" /> -->
+      </div>
+      <div class="info">
+        <h2 class="title-name">Maria Luiza Ramos</h2>
+        <h6 class="text-gradient">{{ 'software-engineering-student' | translate }}</h6>
+        <p class="about-me">Sou desenvolvedora fullstack com foco em aplicações web e mobile. Tenho afinidade com as tecnologias Pyhton, Angular e Flutter. Atualmente em desenvolvimento mobile com Kotlin, IOS e Android.</p>
+      </div>
     </div>
-    <div class="info">
-      <h2 class="title-name">Maria Luiza Ramos</h2>
-      <h6 class="text-gradient">{{ 'software-engineering-student' | translate }}</h6>
-      <p class="about-me">Sou desenvolvedora fullstack com foco em aplicações web e mobile. Tenho afinidade com as tecnologias Pyhton, Angular e Flutter. Atualmente em desenvolvimento mobile com Kotlin, IOS e Android.</p>
+
+    <div class="download-btn">
+      <button class="btn-cv-1" onclick="">
+      Download CV
+      </button>
+
+      <div class="social-icons">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="../../../assets/icons/github.svg" alt="GitHub" class="icon-svg" />
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="../../../assets/icons/linkedin.svg" alt="LinkedIn" class="icon-svg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="email">
+      <p class="text-email">
+        mluiza.ramosagmail.com
+      </p>
     </div>
   </div>
 
-  <div class="download-btn">
-    <button class="btn-cv-1" onclick="">
-     Download CV
-    </button>
-
-    <div class="social-icons">
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <img src="../../../assets/icons/github.svg" alt="GitHub" class="icon-svg" />
-      </a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <img src="../../../assets/icons/linkedin.svg" alt="LinkedIn" class="icon-svg" />
-      </a>
-    </div>
-  </div>
-
-  <div class="email">
-    <p class="text-email">
-      mluiza.ramosagmail.com
-    </p>
-  </div>
-
-  <!-- Ícone de fechar (mobile) -->
-  <!-- <button class="close-btn" *ngIf="isMobile()" (click)="toggleMenu()">✖</button> -->
 </aside>

@@ -1,7 +1,28 @@
 /* estilo da tela geral principal */
+// src/styles/_variables.scss
 
-html{
-    background-color: #2A2B2D;
-    padding: 1%;
-    font-family: 'Inter', sans-serif;
+@use '../src/styles/variables' as *;
+
+$gap: 20px;
+$sidebar-w: 20%;
+$content-w: 78%;
+
+:root {
+  --sidebar-w: 20%;
+  --content-w: 70%;
+  --gap: 20px;
+}
+
+html, body, app-root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $dark-gray;
+  color: $white;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
