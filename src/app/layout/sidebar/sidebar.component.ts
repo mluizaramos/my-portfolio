@@ -28,16 +28,19 @@ export class SidebarComponent {
 
   toggleTheme() {
     this.theme = this.theme === 'dark' ? 'light' : 'dark';
-    console.log('Tema atual:', this.theme);
+    localStorage.setItem('theme', this.theme);
+    this.applyTheme();
+  }
 
-    // Adiciona ou remove classe no body para aplicar o tema
-    if (this.theme === 'dark') {
-      document.body.classList.add('dark-theme');
-      document.body.classList.remove('light-theme');
-    } else {
-      document.body.classList.add('light-theme');
-      document.body.classList.remove('dark-theme');
-    }
+  ngOnInit() {
+    this.theme = localStorage.getItem('theme') as 'dark' | 'light' || 'dark';
+    this.applyTheme();
+  }
+
+  applyTheme() {
+    const body = document.body;
+    body.classList.remove('dark-theme', 'light-theme');
+    body.classList.add(this.theme + '-theme');
   }
 }
 

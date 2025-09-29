@@ -1,7 +1,5 @@
-
 /* src/app/sidebar/sidebar.component.scss */
-/* src/app/sidebar/sidebar.component.scss */
-@use '../../../styles/variables' as *; // ou ajuste o caminho conforme seu projeto
+@use '../../../styles/variables' as *; 
 $gap: 20px;
 
 :host {
@@ -15,57 +13,10 @@ $gap: 20px;
   height: 100%;
   display: flex;
   align-items: stretch;
-  background-color: $black;
-  color: $white;
   border-radius: 30px;
-}
 
-.sidebar-panel {
-  padding: 30px;
-  border-radius: 30px;
-  box-sizing: border-box;
-  overflow: hidden;        /* sem scroll na sidebar — corta o conteúdo que passar */
-}
-
-// .sidebar {
-//   box-sizing: border-box;
-//   z-index: 1000; // garante que fique acima de tudo
-//   transition: left 0.3s ease-in-out; // prepara para animações de entrada no mobile
-
-//     // menu aberto
-//   &.mobile {
-//     position: fixed;
-//     top: 1rem;
-//     left: 0;
-//     height: 95%;
-//     width: 93%;
-//     margin-left: 1rem;
-//     padding-top: 4rem;
-//     border-radius: 2rem;
-//     background-color: rgba(20, 20, 20, 0.4);
-//     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-//     backdrop-filter: blur(40px);
-//     -webkit-backdrop-filter: blur(40px);
-
-//     transform: translateX(-110%);
-//     opacity: 0;
-//     pointer-events: none;
-//     transition: transform 0.3s ease, opacity 0.3s ease;
-
-//     &.mobile-active {
-//       left: 0;
-//       opacity: 1;
-//       transform: translateX(0);
-//       pointer-events: auto;
-//     }
-//   }
-// }
-
-.sidebar {
-  width: 100%;
-  height: 100%;
-  color: white;
-  margin-bottom: 1rem;
+  //effects
+  transition: background-color 0.5s ease, color 0.5s ease;
 
   img {
     width: 100%;
@@ -73,80 +24,76 @@ $gap: 20px;
   }
 }
 
+.sidebar-panel {
+  padding: 30px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* =================== Header =================== */
 .header {
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //background-color: $pink;
 
-  .logo{
+  //effects
+  .icon-theme i {
+    transition: transform 0.5s ease, color 0.5s ease;
+    display: inline-block; 
+  }
+
+  .logo {
     margin: 0;
     height: 22px;
     width: 48px;
   }
 
-  .icon-language {
-    background-color: transparent;
-    border: none;
-    color: $white;
-    cursor: pointer;
-
-    &:hover{
-      color: $pink;
-    }
-  }
-
+  .icon-language,
   .icon-theme {
     background-color: transparent;
     border: none;
-    color: $white;
     cursor: pointer;
+    font-size: 1rem;
 
-    &:hover{
+    &:hover {
       color: $pink;
     }
   }
 }
 
-.title-name{
+/* =================== Profile =================== */
+.my-photo {
+  margin-top: 1rem;
+  height: 10rem;
+}
+
+.title-name {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .text-gradient {
-  margin: 0;
+  margin: 0 0 1rem 0;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 11px;
   background: $linear;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin-bottom: 1rem;
 }
 
-.my-photo{
-  margin-top: 1rem;
-  height: 10rem;
-}
-
-.about-me{
+.about-me {
   margin-top: 20px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
-  color: $white;
   margin-bottom: 1rem;
-
-  .dark-theme & {
-    color: $white;
-  }
 }
 
 .download-btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
@@ -157,19 +104,14 @@ $gap: 20px;
     font-size: 12px;
     font-weight: 200;
     cursor: pointer;
-    border: 1.5px solid $white;
+    border: 1.5px solid;
     background-color: transparent;
-    color: $white;
-    
+
     &:hover {
       background: $linear;
-      color: $white;
+      color: $white !important;
+      border: none;
       border-color: transparent;
-    }
-
-    .dark-theme & {
-      color: $white;
-      border-color: $white;
     }
   }
 
@@ -177,59 +119,109 @@ $gap: 20px;
     display: flex;
     align-items: center;
     gap: 0.2rem;
-  }
 
-  .icon-svg {
-    width: 30px;
-    height: 30px;
-    transition: all 0.3s ease;
+    .icon-svg {
+      width: 30px;
+      height: 30px;
+      transition: all 0.3s ease;
 
-    .dark-theme & {
-      filter: brightness(0) invert(1);
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  a{
-    padding: 0;
-    margin: 0;
-    padding-top: 14px;
   }
 }
 
-.email{
+.email {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.text-email{
-  color: $white;
-  font-size: 10px;
-  font-weight: 200;
+.text-email {
+  font-size: 12px;
+  font-weight: 300;
 }
 
-@media (max-width: 768px) {
 
-  .info{
+/* =================== Effects =================== */
+.title-name,
+.text-email,
+.about-me,
+.btn-cv-1,
+.icon-language,
+.icon-theme,
+.text-gradient,
+.icon-svg {
+  transition: color 0.5s ease, filter 0.5s ease, background 0.5s ease;
+}
+
+.icon-theme i.fa-moon {
+  transform: rotate(0deg);
+}
+
+.icon-theme i.fa-sun {
+  transform: rotate(360deg);
+}
+
+
+/* =================== Responsividade =================== */
+@media (max-width: 768px) {
+  .info {
     padding-top: 2rem;
     padding-bottom: 1rem;
   }
 
-  .download-btn{
-    padding-top: 0.5rem;
-    padding-bottom: 1rem;
-    display: flex;
+  .download-btn {
+    padding: 0.5rem 0;
     justify-content: center;
-    align-items: center;
   }
 
-  .email{
-    display: flex;
-    justify-content: center;
+  .email {
     text-align: center;
+  }
+}
+
+
+/* =================== Temas =================== */
+
+/* Tema escuro (padrão) */
+.sidebar.dark {
+  background-color: $black;
+  color: $white;
+
+  .icon-language,
+  .icon-theme {
+    color: $white;
+  }
+
+  .title-name,
+  .text-email,
+  .about-me {
+    color: $white;
+  }
+
+  .btn-cv-1 {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+/* Tema claro */
+.sidebar.light  {
+  background-color: $white-full;
+  color: $black;
+
+  .icon-language,
+  .icon-theme,
+  .title-name,
+  .text-email,
+  .about-me {
+    color: $black;
+  }
+
+  .btn-cv-1 {
+    color: $black;
+    border-color: $black;
   }
 }
