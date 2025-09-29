@@ -1,9 +1,21 @@
 <!-- src/app/sidebar/sidebar.component.html -->
 <aside class="sidebar">
+
   <div class="sidebar-panel">
+
+     <div class="header">
+       <img class="logo" src="../../../assets/icons/favicon-light.svg" alt="Logo" />
+       <div class="languages">
+        <button class="icon-language" (click)="changeLanguage()">{{ currentLanguage }}</button>
+        <button class="icon-theme" (click)="toggleTheme()">
+          <i class="fa" [ngClass]="theme === 'dark' ? 'fa-moon' : 'fa-sun'"></i>
+        </button>
+       </div>
+     </div>
+
      <div class="profile">
       <div class="my-photo">
-        <!-- <img src="../../../assets/images/preview-dark.png" alt="Minha Foto" /> -->
+        <img src="../../../assets/images/preview-dark.png" alt="Minha Foto" />
       </div>
       <div class="info">
         <h2 class="title-name">Maria Luiza Ramos</h2>
@@ -11,10 +23,11 @@
         <p class="about-me">Sou desenvolvedora fullstack com foco em aplicações web e mobile. Tenho afinidade com as tecnologias Pyhton, Angular e Flutter. Atualmente em desenvolvimento mobile com Kotlin, IOS e Android.</p>
       </div>
     </div>
-
+    
     <div class="download-btn">
+
       <button class="btn-cv-1" onclick="">
-      Download CV
+        Download CV
       </button>
 
       <div class="social-icons">
@@ -25,6 +38,7 @@
           <img src="../../../assets/icons/linkedin.svg" alt="LinkedIn" class="icon-svg" />
         </a>
       </div>
+
     </div>
 
     <div class="email">
@@ -32,6 +46,6 @@
         mluiza.ramosagmail.com
       </p>
     </div>
-  </div>
 
+  </div>
 </aside>

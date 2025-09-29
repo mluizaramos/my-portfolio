@@ -26,3 +26,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body.dark-theme {
+  background-color: $dark-gray;
+  color: $white;
+}
+
+body.light-theme {
+  background-color: $light-gray;
+  color: $black;
+}

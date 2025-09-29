@@ -6,7 +6,6 @@ $gap: 20px;
 
 :host {
   display: block;
-  /* forçamos altura baseada no viewport, subtraindo top+bottom padding do layout */
   height: calc(100vh - #{2 * $gap});
   box-sizing: border-box;
 }
@@ -74,6 +73,43 @@ $gap: 20px;
   }
 }
 
+.header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //background-color: $pink;
+
+  .logo{
+    margin: 0;
+    height: 22px;
+    width: 48px;
+  }
+
+  .icon-language {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    cursor: pointer;
+
+    &:hover{
+      color: $pink;
+    }
+  }
+
+  .icon-theme {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    cursor: pointer;
+
+    &:hover{
+      color: $pink;
+    }
+  }
+}
+
 .title-name{
   margin: 0;
   font-size: 18px;
@@ -116,13 +152,15 @@ $gap: 20px;
   margin-bottom: 1rem;
 
   .btn-cv-1 {
-    padding: 8px 18px;
+    padding: 8px 22px;
     border-radius: 30px;
     font-size: 12px;
     font-weight: 200;
     cursor: pointer;
-    border: transparent;
-
+    border: 1.5px solid $white;
+    background-color: transparent;
+    color: $white;
+    
     &:hover {
       background: $linear;
       color: $white;
