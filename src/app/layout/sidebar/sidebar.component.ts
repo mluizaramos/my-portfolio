@@ -11,7 +11,7 @@ import { NgClass, NgIf } from '@angular/common';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  // === Idioma ===
+  // ===== Idioma =====
   languages = ['PT', 'EN', 'ES'];
   currentLanguageIndex = 0;
   currentLanguage = this.languages[this.currentLanguageIndex];
@@ -23,7 +23,7 @@ export class SidebarComponent {
     // Aqui você poderia chamar ngx-translate para realmente mudar o idioma
   }
 
-  // === Tema ===
+  // ===== Tema =====
   theme: 'dark' | 'light' = 'dark';
 
   toggleTheme() {
@@ -43,23 +43,3 @@ export class SidebarComponent {
     body.classList.add(this.theme + '-theme');
   }
 }
-
-
-// @Component({
-//   selector: 'app-sidebar',
-//   standalone: true,
-//   imports: [NgIf, TranslateModule, ThemeLanguageControlsComponent],
-//   templateUrl: './sidebar.component.html',
-//   styleUrls: ['./sidebar.component.scss']
-// })
-// export class SidebarComponent {
-//   isMobile = false;
-
-//   constructor(private screenService: ScreenService) {}
-
-//   ngOnInit(): void {
-//     this.screenService.isMobile$.subscribe((value) => {
-//       this.isMobile = value;
-//     });
-//   }
-// }

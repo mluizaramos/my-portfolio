@@ -29,6 +29,12 @@ $gap: 20px;
   border-radius: 30px;
   box-sizing: border-box;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;
+  gap: 20px;
 }
 
 /* =================== Header =================== */
@@ -108,8 +114,8 @@ $gap: 20px;
     background-color: transparent;
 
     &:hover {
-      background: $linear;
       color: $white !important;
+      background: $linear;
       border: none;
       border-color: transparent;
     }

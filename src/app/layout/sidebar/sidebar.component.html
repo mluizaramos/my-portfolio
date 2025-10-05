@@ -4,14 +4,21 @@
   <div class="sidebar-panel">
 
      <div class="header">
-       <img class="logo" src="../../../assets/icons/favicon-light.svg" alt="Logo" />
-       <div class="languages">
+      <img
+        class="logo"
+        [src]="theme === 'dark'
+          ? '../../../assets/icons/favicon-light.svg'
+          : '../../../assets/icons/favicon-dark.svg'"
+        alt="Logo"
+      />
+
+      <div class="languages">
         <button class="icon-language" (click)="changeLanguage()">{{ currentLanguage }}</button>
         <button class="icon-theme" (click)="toggleTheme()">
           <i class="fa" [ngClass]="theme === 'dark' ? 'fa-moon' : 'fa-sun'"></i>
         </button>
-       </div>
-     </div>
+      </div>
+    </div>
 
      <div class="profile">
       <div class="my-photo">
